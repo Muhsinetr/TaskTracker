@@ -48,6 +48,8 @@ let curentDay = function(){
     let currentDate = new Date().toJSON().slice(0, 10).split("-").reverse().join("/");
     return currentDate;
 }
+
+date.value = curentDay().split("/").reverse().join("-");
 // Data structure
 let mainArray = {
     Task: {Name:[],description:[],List:[],Date:[],status:[]},
@@ -168,7 +170,7 @@ function ShowBord(Datas,mainName) {
 function clearAll(){
     taskName.value = "";
     description.value = "";
-    date.value = ""
+    date.value = curentDay().split("/").reverse().join("-");
     Select.selectedIndex = 0;
     taskName.focus();
     Savebtn.innerHTML = "Add task"
