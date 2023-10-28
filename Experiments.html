@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=0, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+        }
+        .colormain{
+            height: 75px;
+            width: 32px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+        
+        .clr{
+            height: 10px;
+            aspect-ratio: 1;
+            margin: 2.5px;
+            font-size: 1px;
+            color: inherit;
+        }
+        .clr:hover{
+            outline: 1px solid black;
+        }
+        .coloricon{
+            height: 15px;
+            width: 32px;
+            background-image: url(images/Color.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="colorsection">
+    <div class="coloricon" ></div>
+    <div style="display: none;" class="colormain">
+        <div style="background-color: #F9ACA7; color:#F9ACA7;" class="clr">#F9ACA7</div>
+        <div style="background-color: #FFD767; color:#FFD767;" class="clr">#FFD767</div>
+        <div style="background-color: #8cec55; color:#8cec55;" class="clr">#8cec55</div>
+        <div style="background-color: #f55159; color:#f55159;" class="clr">#f55159</div>
+        <div style="background-color: #a2aa90; color:#a2aa90;" class="clr">#a2aa90</div>
+        <div style="background-color: #6896ec; color:#6896ec;" class="clr">#6896ec</div>
+        <div style="background-color: #c36dfc; color:#c36dfc;" class="clr">#c36dfc</div>
+        <div style="background-color: #f06e99; color:#f06e99;" class="clr">#f06e99</div>
+        <div style="background-color: #baf796; color:#baf796;" class="clr">#baf796</div>
+        <div style="background-color: #7df0f8; color:#7df0f8;" class="clr">#7df0f8</div>
+    </div>
+</div>
+<script>
+    let colorBtn = document.querySelector('.colorsection');
+    let colorMain = document.querySelector('.colormain')
+    colorBtn.addEventListener("mouseover", ()=>{
+        colorMain.style.display = "block";
+        colorMain.style.display = "flex";
+        
+    })
+    colorBtn.addEventListener("mouseout", ()=>{
+        colorMain.style.display = "none";
+    })
+    colorMain.addEventListener("click",(e)=>{
+        if(e.target.className==="clr"){
+            console.log(e.target.innerHTML);
+        }
+    })
+</script>
+</body>
+</html>

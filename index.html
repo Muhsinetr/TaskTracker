@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="maincontainer">
+
+        <!-- first section -->
+
+        <section id="menuboard">
+            <h1 class="topheading" >Menu</h1>
+            <div class="tasksection">
+                <h4 class="menuheads">TASKS</h4>
+                <div class="tasks" id="upcoming"><img src="images/img-1 (3).png" alt="">Upcoming <div>0</div></div>
+                <div class="tasks" id="Today"><img src="images/img-1 (1).png" alt="">Today<div>0</div></div>
+                <div class="tasks" id="All"><img src="images/img-1 (4).png" alt="">All<div>0</div></div>
+                <div class="tasks" id="Pending"><img src="images/pending.png" alt="">Pending<div>0</div></div>
+                <div class="tasks" id="Stickywall"><img src="images/img-1 (2).png" alt="">Sticky wall<div>0</div></div>
+            </div>
+            <div class="list-section">
+                <h4 class="menuheads">TAGS</h4>
+                <div class="list-items">
+                </div>
+                <div class="add-list">
+                    <div class="pluse">+</div>
+                    Add new Tag
+                </div>
+                <input class="list-add" type="text">
+                <button class="list-btn">Add</button>
+            </div>
+        </section>
+
+        <!-- second section -->
+
+        <section id="taskbord">
+            <div class="task-name"><span>All</span> <div>0</div></div>
+            <div class="add-taskbutton"><span>+</span>Add New Task</div>
+            <div class="task-display">
+        <!-- show dispaly is here  -->
+            </div>
+
+        <!-- third section -->
+
+        </section>
+        <section id="newtaskboard">
+            <h4 class="task-head">Task:</h4>
+            <input class="input-task" type="text" onkeydown="focusNext(event, 'description')" placeholder="Task name.....">
+            <textarea class="description" onkeydown="focusNext(event, 'select')" placeholder="Description...." ></textarea>
+            <div class="list-filling" >
+                <p>Tag</p>
+                <select class="select" onkeydown="focusNext(event, 'date-1')" id="selecT">
+                </select>
+            </div>
+            <div class="due-date">
+                <p>Due date</p>
+                <input class="date-1" type="date">
+            </div>
+            <div class="buttons">
+                <div onclick="clearAll()" class="clear">Clear all</div>
+                <div class="save">Add task</div>
+            </div>
+        </section>
+        <section style="display: none;" class="sticky-wall" >
+            <header class="sw-header" >
+                <div class="back-btn" title="Back to home"></div>
+                <div class="heding" >Sticky wall</div>
+            <div class="close-btn" title="close"></div>
+            </header>
+            <main class="sw-main">
+                <div class="sw-addSection">
+                    <div class="swaddbtn">
+                        <div class="swbtnicon" ></div>
+                        <textarea title="doble click or Enter to save" class="swtextarea" placeholder="Write......"></textarea>
+                        <div class="infomer" >Double click or press Enter</div>
+                    </div>
+                </div>
+                <div class="sw-showbord"></div>
+            </main>
+        </section>
+    </div>
+    </main>    
+    <script src="script.js"></script>
+</body>
+</html>
