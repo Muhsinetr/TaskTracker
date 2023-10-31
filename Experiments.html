@@ -72,6 +72,9 @@
             console.log(e.target.innerHTML);
         }
     })
+
+    let currentDate = new Date().toJSON().slice(0, 10).split("-").reverse().join("/");
+    console.log(currentDate);
 </script>
 </body>
 </html>

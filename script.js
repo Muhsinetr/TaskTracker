@@ -41,7 +41,15 @@ let infomer = document.querySelector('.infomer');
 let swShowBord = document.querySelector('.sw-showbord');
 let swdlt = document.querySelector('.swdlt');
 let swback = document.querySelector('.back-btn');
-let swclose = document.querySelector('.close-btn');
+let swclose = document.querySelector('.sw-header .close-btn');
+
+//////media in task
+let taskClose = document.querySelector('.task_head .close-btn');
+let  med_750 = window.matchMedia("(max-width: 850px)");
+let  med_500 = window.matchMedia("(max-width: 500px)");
+let menuBar = document.querySelector(".menuBar");
+let menuClose = document.querySelector(".menu_head .close-btn")
+
 
 ///curent day
 let curentDay = function(){
@@ -110,6 +118,7 @@ function addItems() {
             alert("No text found");
         }
     }
+    hideTaskbar();
 }
 
 // Function to display all items
@@ -163,6 +172,7 @@ function ShowBord(Datas,mainName) {
 
     taskShowName.textContent = mainName;
     taskNumber.innerHTML = limit;
+    hideMenu();
 }
 
 
@@ -174,6 +184,10 @@ function clearAll(){
     Select.selectedIndex = 0;
     taskName.focus();
     Savebtn.innerHTML = "Add task"
+    if(window.matchMedia("(max-width: 850px)").matches) {
+        sectionThree.removeAttribute("class");
+        sectionThree.style.display="block";
+      }
 }
 
 //// set Selects' options
@@ -334,6 +348,7 @@ function stickWall(){
     sectionFour.style.display= "block";
     sectionFour.style.display= "flex";
     swShowAll();
+    menuBar.style.display = "none"
 }
 
 function swadd(){
@@ -407,13 +422,33 @@ function backToMain(){
     sectionFour.style.display = "none";
     menuboard.style.display = 'block';
     sectionTwo.style.display = 'block';
-    sectionThree.style.display = 'block';
+    menuBar.style.display = 'block';
+    hideTaskbar();
+    hideMenu();
     setMenuItemNum();
 }
 
 function setlocal(){
     let localSave = JSON.stringify(mainArray);
     localStorage.setItem("allData",localSave);
+}
+
+function hideTaskbar(){
+    if(med_750.matches){
+        sectionThree.style.display = "none";
+    }else{
+        sectionThree.style.display= "block";
+    }
+}
+
+function hideMenu(){
+    if(med_500.matches){
+        sectionOne.style.display = "none";
+        menuBar.style.display = 'block';
+    }else{
+        sectionOne.style.display= "block";
+        menuBar.style.display = 'none';
+    }
 }
 
 // Event listener for clicks in the display section
@@ -475,6 +510,11 @@ display.addEventListener("click", function (e) {
         date.value = mainArray.Task.Date[indNum].split("/").reverse().join("-");
         Savebtn.innerText = "Save changes";
         editIndex = indNum;
+        if(window.matchMedia("(max-width: 850px)").matches) {
+            sectionThree.removeAttribute("class");
+            sectionThree.style.display="block";
+          }
+          taskName.focus();
     }
 });
 
@@ -490,6 +530,8 @@ today.addEventListener('click',todayShowBord);
 upcoming.addEventListener('click',upcomingShowBord);
 pending.addEventListener('click',pendingShowBord);
 stickywal.addEventListener('click',stickWall);
+taskName.addEventListener('focus', function(){sectionThree.style.backgroundColor = "rgb(217 217 217)"})
+taskName.addEventListener('focusout',function(){sectionThree.style.backgroundColor = "rgb(245 242 242)"})
 
 /////Stickwall
 swbtnicon.addEventListener('click',swadd);
@@ -498,7 +540,13 @@ swtextarea.addEventListener("keypress",function(event){if(event.key==="Enter"){s
 swShowBord.addEventListener('click',deleteSw)
 swback.addEventListener('click',backToMain)
 swclose.addEventListener('click',backToMain)
+taskClose.addEventListener('click',function(){sectionThree.style.display= "none"})
 
+/////media
+med_750.addListener(hideTaskbar);
+med_500.addListener(hideMenu);
+menuBar.addEventListener('click',()=>{sectionOne.style.display = "block"})
+menuClose.addEventListener('click',function(){sectionOne.style.display= "none"})
 
 // call local storage
 function callLocalstroage(){
@@ -508,6 +556,7 @@ function callLocalstroage(){
         setMenuItemNum();
     }
 }
+hideTaskbar();
 callLocalstroage();
 showListDisplay();
 setList();

@@ -24,6 +24,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
 }
 #menuboard,
 #taskbord,
@@ -36,6 +37,9 @@ a{
 #taskbord{
     width: 45%;
     background-color: white;
+}
+#newtaskboard{
+    display: none;
 }
 
 .topheading{
@@ -471,6 +475,7 @@ textarea{
     height: 18px;
     width: 80px;
     display: none;
+    z-index: 10;
 }
 .colormain{
     height: 77px;
@@ -478,6 +483,7 @@ textarea{
     margin-top: 2px;
     margin-left: 23px;
     display: none;
+    background-color: white;
 }
 .clr{
     height: 10px;
@@ -511,5 +517,44 @@ textarea{
     display: block;
 }
 .indHid{
+    display: none;
+}
+.task_head{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.task_head .close-btn{
+    margin-right: 20px;
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    display: none;
+}
+.noneDisplay{
+    display: none;
+}
+.blockDisplay{
+    display: block;
+}
+.menuBar{
+    height: 30px;
+    aspect-ratio: 1;
+    background-image: url(images/menuBar.png);
+    position: absolute;
+    background-size: cover;
+    top: 10px;
+    left: 10px;
+    display: none;
+}
+.menu_head{
+    display: flex;
+    justify-content: space-between;
+}
+.menu_head .close-btn{
+    margin-right: 20px;
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
     display: none;
 }

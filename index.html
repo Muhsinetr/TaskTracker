@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 <body>
     <main id="maincontainer">
 
+    <div class="menuBar"></div>
+
         <!-- first section -->
 
         <section id="menuboard">
+            <div class="menu_head">
             <h1 class="topheading" >Menu</h1>
+            <div class="close-btn" title="close"></div>
+            </div>
             <div class="tasksection">
                 <h4 class="menuheads">TASKS</h4>
                 <div class="tasks" id="upcoming"><img src="images/img-1 (3).png" alt="">Upcoming <div>0</div></div>
@@ -47,7 +53,10 @@
 
         </section>
         <section id="newtaskboard">
+            <div class="task_head">
             <h4 class="task-head">Task:</h4>
+            <div class="close-btn" title="close"></div>
+        </div>
             <input class="input-task" type="text" onkeydown="focusNext(event, 'description')" placeholder="Task name.....">
             <textarea class="description" onkeydown="focusNext(event, 'select')" placeholder="Description...." ></textarea>
             <div class="list-filling" >

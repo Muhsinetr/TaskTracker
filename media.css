@@ -1,0 +1,73 @@
+@media (max-width:850px){
+    #newtaskboard{
+        /* visibility: hidden; */
+        position: absolute;
+        width: 230px;
+        border: 1px solid rgb(63, 63, 63);
+        height: 60%;
+    }
+    #taskbord{
+        width: 70%;
+    }
+    .task_head .close-btn{
+        display: block;
+    }
+    .buttons{
+        margin-top: 30px;
+    }
+}
+@media (max-width: 750px){
+    #menuboard{
+        width: 200px;
+    }
+}
+@media(max-width: 600px){
+    .sw-main{
+        flex-direction: column;
+    }
+    .sw-showbord{
+        width: 100%;
+        justify-content:center;
+    }
+    .swaddbtn{
+        width: 80%;
+        height: 70px;
+    }
+}
+@media(max-width: 500px){
+    #menuboard{
+        /* display: none; */
+        position: absolute;
+        left: 0;
+    }
+    #taskbord{
+        width: 90%;
+        margin-left: 40px;
+    }
+    .menuBar{
+        display: block;
+    }
+    .date{
+        margin-left: 5px;
+    }
+    #maincontainer{
+        height: 95%;
+    }
+    .menu_head .close-btn{
+        display: block;
+    }
+}
+@media(max-width: 340px){
+      .task-display{
+        margin-left: -15px;
+        width: 90%;
+    } 
+    .hideD{
+        flex-wrap: wrap;
+        gap: 8px;
+
+    }
+    .details{
+        height: 50px;
+    }
+}
