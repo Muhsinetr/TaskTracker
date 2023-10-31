@@ -35,10 +35,19 @@
     }
 }
 @media(max-width: 500px){
+    #maincontainer{
+        height: 95%;
+    }
     #menuboard{
-        /* display: none; */
         position: absolute;
         left: 0;
+    }
+    .sw-addSection{
+        margin: 0px auto;
+    }
+    .swaddbtn {
+        width: 271px;
+        height: 80px;
     }
     #taskbord{
         width: 90%;
@@ -54,6 +63,20 @@
         height: 95%;
     }
     .menu_head .close-btn{
+        display: block;
+    }
+    .colormain {
+        height: 120px;
+        width: 80px;
+        margin-left: 0px;
+    }
+    .clr {
+        height: 15px;
+    }
+    .swdlt{
+        display: block;
+    }
+    .colorsection{
         display: block;
     }
 }
