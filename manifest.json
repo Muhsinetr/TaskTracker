@@ -1,6 +1,6 @@
 {
-    "name":"To-do-list",
-    "short_name": "To-do-list",
+    "name":"TaskTracker",
+    "short_name": "TaskTracker",
     "start_url":".",
     "background_color": "white",
     "theme_color": "#009578",

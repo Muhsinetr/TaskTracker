@@ -1,6 +1,5 @@
 @media (max-width:850px){
     #newtaskboard{
-        /* visibility: hidden; */
         position: absolute;
         width: 230px;
         border: 1px solid rgb(63, 63, 63);
@@ -39,6 +38,7 @@
         height: 95%;
     }
     #menuboard{
+        height: 100%;
         position: absolute;
         left: 0;
     }
@@ -48,6 +48,9 @@
     .swaddbtn {
         width: 271px;
         height: 80px;
+    }
+    .switemtext{
+        font-family: Arial, Helvetica, sans-serif;
     }
     #taskbord{
         width: 90%;
@@ -81,14 +84,13 @@
     }
 }
 @media(max-width: 340px){
-      .task-display{
+    .task-display{
         margin-left: -15px;
         width: 90%;
     } 
     .hideD{
         flex-wrap: wrap;
         gap: 8px;
-
     }
     .details{
         height: 50px;
