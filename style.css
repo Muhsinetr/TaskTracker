@@ -1,21 +1,24 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:sans-serif;
+    font-family: sans-serif;
 }
-body{
+
+body {
     height: 100dvh;
     background-color: wheat;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
-#maincontainer{
+
+#maincontainer {
     height: 550px;
     width: 1000px;
     background: white;
@@ -25,42 +28,48 @@ a{
     justify-content: space-evenly;
     position: relative;
 }
+
 #menuboard,
 #taskbord,
-#newtaskboard{
+#newtaskboard {
     height: 95%;
     border-radius: 15px;
     width: 25%;
     background-color: rgb(245 242 242);
 }
-#taskbord{
+
+#taskbord {
     width: 45%;
     background-color: white;
 }
-#newtaskboard{
+
+#newtaskboard {
     display: none;
 }
 
-.topheading{
+.topheading {
     font-family: system-ui;
     margin: 10px;
     font-size: 20px;
     color: rgb(82, 81, 81);
 }
-.menuheads{
+
+.menuheads {
     font-size: 14px;
     font-weight: 700;
     color: #727171;
-    margin-bottom:10px;
+    margin-bottom: 10px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.tasksection{
+
+.tasksection {
     width: 90%;
     margin: 0 auto;
     border-bottom: 1px solid #dfdddd;
     margin-top: 25px;
 }
-.tasks{
+
+.tasks {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -69,17 +78,21 @@ a{
     font-size: 14px;
     font-weight: 700;
     height: 30px;
-    border-radius: 10px;;
+    border-radius: 10px;
+    cursor: pointer;
 }
-.tasks img{
+
+.tasks img {
     height: 15px;
     width: 15px;
     margin-right: 10px;
     margin-left: 10px;
 }
-.tasks div,.number{
-    margin-left:auto;
-    margin-right:20px;
+
+.tasks div,
+.number {
+    margin-left: auto;
+    margin-right: 20px;
     height: 15px;
     width: 20px;
     display: flex;
@@ -88,24 +101,25 @@ a{
     background-color: #e2e2e2;
     color: rgb(82, 80, 80);
     font-size: 10px;
+    cursor: pointer;
 }
-.tasks:hover{
-    color: rgb(92, 92, 92);
-    background-color:  rgb(231, 229, 229); ;
-}
-.pedingRed{
+
+.pedingRed {
     color: red;
 }
-.list-section{
+
+.list-section {
     margin: 0 auto;
     width: 90%;
     margin-top: 10px;
 }
-.list-items{
+
+.list-items {
     height: 150px;
     overflow: auto;
 }
-.lists{
+
+.lists {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -116,14 +130,16 @@ a{
     border-radius: 10px;
     cursor: pointer;
 }
-.color{
+
+.color {
     height: 10px;
     width: 10px;
     margin: 0 10px;
     border-radius: 2px;
-
 }
-.list-add,.list-btn{
+
+.list-add,
+.list-btn {
     position: absolute;
     margin-top: -24px;
     height: 25px;
@@ -134,27 +150,33 @@ a{
     color: #484848;
     display: none;
 }
-.list-add:focus{
+
+.list-add:focus {
     outline: none;
 }
-.list-btn{
+
+.list-btn {
     margin-left: 120px;
     width: 22px;
     cursor: pointer;
 }
-.dltbtn,.edtbtn{
-    height:20px;
+
+.dltbtn,
+.edtbtn {
+    height: 20px;
     width: 20px;
     background-image: url(images/delete.png);
-    background-size:cover ;
+    background-size: cover;
     margin-left: 15px;
 }
-.edtbtn{
-    height:15px;
+
+.edtbtn {
+    height: 15px;
     width: 15px;
     background-image: url(images/edit.png);
 }
-.add-list{
+
+.add-list {
     height: 30px;
     width: 90%;
     margin: 0 auto;
@@ -163,12 +185,20 @@ a{
     color: #7f7f7f;
     font-size: 15px;
     cursor: pointer;
-
 }
-.add-list div{
+
+.add-list div {
     margin-right: 5px;
 }
-.task-name{
+
+.tasks:hover,
+.lists:hover,
+.add-list:hover {
+    color: rgb(92, 92, 92);
+    background-color: rgb(231, 229, 229);
+}
+
+.task-name {
     margin: 10px;
     font-size: 30px;
     font-weight: 700;
@@ -177,7 +207,8 @@ a{
     align-items: center;
     color: #5b5b5b;
 }
-.task-name div{
+
+.task-name div {
     height: 30px;
     width: 30px;
     margin-left: 15px;
@@ -189,7 +220,8 @@ a{
     border-radius: 5px;
     border: 1px solid #c7c7c7;
 }
-.add-taskbutton{
+
+.add-taskbutton {
     height: 35px;
     width: 90%;
     margin: 0 auto;
@@ -202,44 +234,53 @@ a{
     color: #c7c7c7;
     cursor: pointer;
 }
-.add-taskbutton:hover{
+
+.add-taskbutton:hover {
     color: rgb(143, 142, 142);
 }
-.add-taskbutton span{
+
+.add-taskbutton span {
     margin-right: 10px;
     margin-left: 10px;
     font-weight: 700;
     font-size: 20px;
 }
-.task-display{
+
+.task-display {
     height: 405px;
     width: 90%;
     margin: 0 auto;
     margin-top: 5px;
     overflow: auto;
 }
-.task{
+
+.task {
     border-bottom: 1px solid #dfdddd;
     cursor: pointer;
 }
-.Index{
+
+.Index {
     display: none;
 }
-.task-name-bord{
+
+.task-name-bord {
     min-height: 35px;
     display: flex;
     align-items: center;
     height: 100%;
     width: 100%;
 }
-.task-name-bord input{
+
+.task-name-bord input {
     margin-left: 10px;
 }
-.task-name-bord p{
+
+.task-name-bord p {
     margin-left: 10px;
     font-size: 13px;
 }
-.arrow{
+
+.arrow {
     margin-left: auto;
     margin-right: 15px;
     height: 15px;
@@ -248,15 +289,18 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.details{
+
+.details {
     height: 30px;
     display: none;
 }
-.hideD{
+
+.hideD {
     display: flex;
     align-items: center;
 }
-.date{
+
+.date {
     height: 20px;
     margin-left: 32px;
     border-right: 1px solid #dfdddd;
@@ -265,44 +309,51 @@ a{
     font-size: 12px;
     font-weight: 800;
 }
-.date div{
+
+.date div {
     height: 18px;
     width: 18px;
-    margin: 0  10px;
+    margin: 0 10px;
     background-image: url(images/date.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
-.date p{
+
+.date p {
     margin-right: 10px;
-    color:#5b5b5b;
+    color: #5b5b5b;
 }
-.list-name{
+
+.list-name {
     height: 20px;
     display: flex;
     align-items: center;
     font-size: 13px;
-    color:#5b5b5b;
+    color: #5b5b5b;
 }
-.list-name div{
+
+.list-name div {
     height: 10px;
     width: 10px;
     background-color: rgb(230, 120, 120);
-    margin-left:10px;
+    margin-left: 10px;
     margin-right: 5px;
     border-radius: 2px;
 }
-.strike{
+
+.strike {
     text-decoration: line-through;
-    color: #7f7f7f ;
+    color: #7f7f7f;
 }
-.task-head{
+
+.task-head {
     font-family: system-ui;
     margin: 10px;
     font-size: 20px;
     color: rgb(82, 81, 81);
 }
-.input-task{
+
+.input-task {
     width: 87%;
     margin-left: 16px;
     height: 30px;
@@ -310,7 +361,8 @@ a{
     padding-left: 10px;
     border: 1px solid #dfdddd;
 }
-textarea{
+
+textarea {
     margin-left: 16px;
     margin-top: 10px;
     resize: none;
@@ -320,7 +372,9 @@ textarea{
     height: 100px;
     width: 87%;
 }
-.list-filling,.due-date{
+
+.list-filling,
+.due-date {
     display: flex;
     align-items: center;
     margin-left: 20px;
@@ -329,7 +383,9 @@ textarea{
     font-weight: 700;
     color: #6c6c6c;
 }
-.list-filling select,.due-date input{
+
+.list-filling select,
+.due-date input {
     margin-left: auto;
     margin-right: 40px;
     width: 100px;
@@ -341,58 +397,68 @@ textarea{
     font-size: 12px;
     cursor: pointer;
 }
-.buttons{
+
+.buttons {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top:225px;
+    margin-top: 225px;
 }
-.save,.clear{
+
+.save,
+.clear {
     font-size: 12px;
     font-weight: 600;
     padding: 5px 8px;
     border-radius: 5px;
-    border:1px solid #bdbaba;
+    border: 1px solid #bdbaba;
     cursor: pointer;
 }
-.save{
-    background-color:rgb(240 240 37);
+
+.save {
+    background-color: rgb(240 240 37);
 }
 
-.sticky-wall{
-    width:100%;
+.sticky-wall {
+    width: 100%;
     height: 100%;
     overflow: auto;
     border: 1px blue;
     position: relative;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.sw-header{
+
+.sw-header {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     width: 98%;
 }
-.back-btn,.close-btn{
+
+.back-btn,
+.close-btn {
     width: 40px;
     aspect-ratio: 1;
     background-image: url(images/backbtn.png);
     background-size: cover;
 }
-.close-btn{
+
+.close-btn {
     left: 95%;
     background-image: url(images/close-btn.png);
 }
-.heding{
+
+.heding {
     color: #484848;
     font-weight: 700;
     font-family: system-ui;
     font-size: 30px;
 }
-.sw-showbord{
+
+.sw-showbord {
     height: 100%;
     width: 80%;
     display: flex;
@@ -401,12 +467,14 @@ textarea{
     flex-wrap: wrap;
     overflow: auto;
 }
-.sw-main{
+
+.sw-main {
     height: 88%;
     width: 98%;
     display: flex;
 }
-.swaddbtn{
+
+.swaddbtn {
     height: 160px;
     width: 170px;
     margin: 10px;
@@ -416,13 +484,15 @@ textarea{
     justify-content: center;
     border: 1px solid grey;
 }
-.swbtnicon{
+
+.swbtnicon {
     height: 50px;
     width: 50px;
     background-image: url(images/plusBtn.png);
     background-size: contain;
 }
-.swtextarea{
+
+.swtextarea {
     height: 100%;
     width: 100%;
     resize: none;
@@ -431,14 +501,16 @@ textarea{
     position: relative;
     display: none;
 }
-.infomer{
+
+.infomer {
     font-size: 12px;
     text-align: center;
     color: #000000;
     background-color: rgba(3, 3, 3, 0.185);
     display: none;
 }
-.switems{
+
+.switems {
     height: 160px;
     width: 170px;
     margin: 10px;
@@ -448,14 +520,16 @@ textarea{
     position: relative;
     border-radius: 5px;
 }
-.switemtext{
+
+.switemtext {
     max-height: 100%;
     overflow: auto;
     font-family: cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.swdlt{
+
+.swdlt {
     height: 18px;
-    width: 80px;
+    width: 53px;
     margin: 0 auto;
     background-image: url(images/delete.png);
     background-size: contain;
@@ -466,17 +540,19 @@ textarea{
     display: none;
     bottom: 0;
 }
-.colorsection{
+
+.colorsection {
     position: absolute;
     bottom: 0;
     right: 0;
     margin-right: 5px;
     height: 18px;
-    width: 80px;
+    width: 54px;
     display: none;
     z-index: 10;
 }
-.colormain{
+
+.colormain {
     height: 77px;
     width: 32px;
     margin-top: 2px;
@@ -484,17 +560,20 @@ textarea{
     display: none;
     background-color: white;
 }
-.clr{
+
+.clr {
     height: 10px;
     aspect-ratio: 1;
     margin: 2.5px;
     font-size: 1px;
     color: inherit;
 }
-.clr:hover{
+
+.clr:hover {
     outline: 1px solid black;
 }
-.coloricon{
+
+.coloricon {
     height: 15px;
     width: 32px;
     background-image: url(images/Color.png);
@@ -503,7 +582,8 @@ textarea{
     background-position: center;
     margin: 1px auto;
 }
-.clflex{
+
+.clflex {
     height: 100%;
     width: 100%;
     border: 1px solid black;
@@ -512,31 +592,57 @@ textarea{
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.switems:hover .swdlt,.switems:hover .colorsection,.colorsection:hover .colormain{
-    display: block;
+
+.swedt {
+    height: 17px;
+    width: 53px;
+    margin: 0 auto;
+    background-image: url(images/edit.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    background-color: inherit;
+    display: none;
+    left: 35%;
+    bottom: 0;
 }
-.indHid{
+
+.switems:hover .swdlt,
+.switems:hover .swedt,
+.switems:hover .colorsection,
+.colorsection:hover .colormain {
+    display: block;
+    cursor: pointer;
+}
+
+.indHid {
     display: none;
 }
-.task_head{
+
+.task_head {
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
-.task_head .close-btn{
+
+.task_head .close-btn {
     margin-right: 20px;
     height: 30px;
     width: 30px;
     margin-top: 10px;
     display: none;
 }
-.noneDisplay{
+
+.noneDisplay {
     display: none;
 }
-.blockDisplay{
+
+.blockDisplay {
     display: block;
 }
-.menuBar{
+
+.menuBar {
     height: 30px;
     aspect-ratio: 1;
     background-image: url(images/menuBar.png);
@@ -546,11 +652,13 @@ textarea{
     left: 10px;
     display: none;
 }
-.menu_head{
+
+.menu_head {
     display: flex;
     justify-content: space-between;
 }
-.menu_head .close-btn{
+
+.menu_head .close-btn {
     margin-right: 20px;
     height: 30px;
     width: 30px;
