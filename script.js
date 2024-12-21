@@ -42,6 +42,7 @@ let swShowBord = document.querySelector(".sw-showbord");
 let swdlt = document.querySelector(".swdlt");
 let swback = document.querySelector(".back-btn");
 let swclose = document.querySelector(".sw-header .close-btn");
+let swEdit = document.querySelector("edtSw");
 
 //////media in task
 let taskClose = document.querySelector(".task_head .close-btn");
@@ -420,6 +421,7 @@ function swShowAll() {
     </div>
 </div>
 </div>
+<textarea class="edtSw" ></textarea>
     </div>`;
     });
 }
@@ -439,6 +441,14 @@ function deleteSw(e) {
         mainArray.StickyWall.Color[clrInd] = e.target.innerHTML;
         swShowAll();
         setlocal();
+    }
+    if (e.target.className === "swedt") {
+        let txtcont = e.target.previousElementSibling.previousElementSibling.previousElementSibling;
+        let text = txtcont.innerText;
+        txtcont.innerHTML = "";
+        e.target.nextElementSibling.nextElementSibling.style.display = "block";
+        e.target.nextElementSibling.nextElementSibling.innerText = text;
+        e.target.nextElementSibling.nextElementSibling.focus();
     }
 }
 
@@ -549,6 +559,19 @@ display.addEventListener("click", function(e) {
     }
 });
 
+/// Stick wall edit save
+function swEdtSave(e) {
+    if (e.target.className == "edtSw") {
+        let ediText = e.target.value;
+        let ediInd = e.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+        mainArray.StickyWall.Text[ediInd] = ediText.charAt(0).toUpperCase() + ediText.slice(1);
+        console.log(mainArray.StickyWall.Text[ediInd]);
+        swShowAll();
+        setlocal();
+    };
+};
+
+
 // Event listener for delete button
 Savebtn.addEventListener("click", addItems);
 addTask.addEventListener("click", clearAll);
@@ -573,7 +596,9 @@ taskName.addEventListener("focusout", function() {
 });
 
 /////Stickwall
-swbtnicon.addEventListener("click", swadd);
+swbtnicon.addEventListener("click", function() {
+    swadd()
+});
 swtextarea.addEventListener("dblclick", swSave);
 swtextarea.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
@@ -581,6 +606,7 @@ swtextarea.addEventListener("keypress", function(event) {
     }
 });
 swShowBord.addEventListener("click", deleteSw);
+swShowBord.addEventListener("dblclick", swEdtSave);
 swback.addEventListener("click", backToMain);
 swclose.addEventListener("click", backToMain);
 taskClose.addEventListener("click", function() {
